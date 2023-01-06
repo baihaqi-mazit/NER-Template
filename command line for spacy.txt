@@ -1,0 +1,18 @@
+#for filling in config requirement
+python -m spacy init fill-config base_config.cfg config.cfg
+
+#for training
+#custom logging
+python -m spacy train config.cfg --code ./Logger.py --output ./output --paths.train ./train.spacy --paths.dev ./test.spacy
+
+python -m spacy train config.cfg --output ./output --paths.train ./train.spacy --paths.dev ./test.spacy
+
+
+#for debugging config.cfg
+python -m spacy debug config config.cfg --paths.train ./train.spacy --paths.dev ./test.spacy
+
+#for evaluation
+python -m spacy evaluate ./output08102021/model-best ./test.spacy
+
+#for debugging data
+python -m spacy debug data config3.cfg --paths.train ./train.spacy --paths.dev ./test.spacy

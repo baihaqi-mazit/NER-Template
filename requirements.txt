@@ -1,0 +1,10 @@
+opencv-python
+pandas
+pytesseract
+nltk
+jsonlines
+numpy
+spacy
+scikit-learn
+tqdm
+matplotlib
